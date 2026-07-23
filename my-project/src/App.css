@@ -1,0 +1,68 @@
+/* ── Modal animations ── */
+.modal-backdrop {
+  animation: fadeIn 0.2s ease-out;
+}
+.modal-enter {
+  animation: slideUp 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Toast animation ── */
+.toast-enter {
+  animation: toastSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes toastSlide {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Card staggered entrance ── */
+.student-card {
+  animation: cardFadeIn 0.35s ease-out backwards;
+}
+
+.student-card:nth-child(1)  { animation-delay: 0.00s; }
+.student-card:nth-child(2)  { animation-delay: 0.04s; }
+.student-card:nth-child(3)  { animation-delay: 0.08s; }
+.student-card:nth-child(4)  { animation-delay: 0.12s; }
+.student-card:nth-child(5)  { animation-delay: 0.16s; }
+.student-card:nth-child(6)  { animation-delay: 0.20s; }
+.student-card:nth-child(7)  { animation-delay: 0.24s; }
+.student-card:nth-child(8)  { animation-delay: 0.28s; }
+.student-card:nth-child(9)  { animation-delay: 0.32s; }
+.student-card:nth-child(10) { animation-delay: 0.36s; }
+.student-card:nth-child(11) { animation-delay: 0.40s; }
+.student-card:nth-child(12) { animation-delay: 0.44s; }
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
